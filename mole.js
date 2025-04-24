@@ -71,9 +71,13 @@ function selectTile(){
     }
     else if(this==currPlantTile)
     {
-        document.getElementById("score").innerText="GAME OVER " +score.toString();
+        document.getElementById("gameOverScreen").style.display = "block";
+        document.getElementById("finalScore").innerText = "GAME OVER!\n\nScore: " + score;
+        document.getElementById("board").style.display = "none";
+        document.getElementById("score").style.display = "none";
         gameOver=true;
         document.getElementById("restartBtn").style.display="block";
+        document.getElementById("board").style.display="none";
     }
 
 }

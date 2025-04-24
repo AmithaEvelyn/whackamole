@@ -7,7 +7,7 @@ body{
 
 .pixel-title {
     font-family: 'Press Start 2P', cursive;
-    font-size: 1.5rem;
+    font-size: 3rem;
     color: #ff4f4f;
     text-align: center;
     text-shadow: 2px 2px 0 #000;
@@ -47,30 +47,49 @@ body{
     -ms-user-select: none;
 }
 
+#gameOverScreen {
+  display: none;
+  text-align: center;
+  margin-top: 30px;
+  /* background-color: rgba(0, 0, 0, 0.65); */
+  padding: 20px;
+  border-radius: 20px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+#finalScore {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.5rem;
+  color: #ff4f4f;
+  text-shadow: 2px 2px #000;
+  white-space: pre-line;
+  margin-bottom: 20px;
+}
+
 #restartBtn {
-    display: none; 
-    margin: 20px auto;
-    padding: 12px 24px;
-    font-size: 18px;
-    font-weight: bold;
-    color: black;
-    background: linear-gradient(135deg, #ff4e50, #f9d423);
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s, box-shadow 0.2s;
-    
+  padding: 12px 28px;
+  font-size: 26px;
+  font-family: 'Press Start 2P', cursive;
+  background: linear-gradient(135deg, #ff4e50, #f9d423);
+  border: none;
+  border-radius: 10px;
+  color: #000;
+  cursor: pointer;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 #restartBtn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.4);
 }
 
-#restartBtn:active {
-    transform: scale(0.98);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
 }
 
 
